@@ -114,4 +114,30 @@ console.log("--- Respuesta punto 6 ---");
   console.log(res); // [2,3]
 })();
 
-//  7) Crear un modulo .js que contenga una variable llamada base cuyo valor es el número 2 y tres funciones, las cual va a exportar cada vez que se requiera el archivo llamadas multiplicar , cambiarBase y consultarBase. La función multiplicar toma un valor como input de tipo Number o String y lo multiplica por el valor de la variable base. La función cambiarBase modifica el valor de la variable base el cual se mantiene para las próximas ejecuciones y consultarBase retorna el valor actual de la variable base
+/*
+ * 7) Crear un modulo .js que contenga una variable llamada base
+ * cuyo valor es el número 2 y tres funciones, las cual va a exportar
+ * cada vez que se requiera el archivo llamadas multiplicar ,
+ * cambiarBase y consultarBase. La función multiplicar toma un valor
+ * como input de tipo Number o String y lo multiplica por el valor
+ * de la variable base. La función cambiarBase modifica el valor
+ * de la variable base el cual se mantiene para las próximas ejecuciones
+ * y consultarBase retorna el valor actual de la variable base
+ */
+module.exports.modulo = {
+  base: 2,
+  multiplicar: function(number) {
+    let n = parseInt(number);
+    return n * base;
+  },
+  cambiarBase: function(number) {
+    let n = parseInt(number);
+    this.base = n;
+  },
+  consultarBase: function() {
+    return this.base;
+  }
+};
+
+// consumir desde otro js de la siguiente manera
+// const obj = require("./index").modulo;
