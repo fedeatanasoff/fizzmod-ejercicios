@@ -101,10 +101,15 @@ console.log("--- Respuesta punto 6 ---");
   let arr = [];
   let y = 2;
   arr.push(x, y);
-  let res = arr.forEach(n => {
-    console.log(`El numero en el indice ${indice} es : ${n}`);
-    res + 1;
-  });
+  // SOLUCION 1
+  let res = arr.map(n => n + 1);
+
+  // SOLUCION 2
+  // let res = [];
+  // arr.forEach( (n, indice) => {
+  //   console.log(`El numero en el indice ${indice} es : ${n}`);
+  //   res.push(n + 1);
+  // });
 
   console.log(res); // [2,3]
 })();
