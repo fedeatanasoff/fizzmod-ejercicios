@@ -101,14 +101,10 @@ console.log("--- Respuesta punto 6 ---");
   let arr = [];
   let y = 2;
   arr.push(x, y);
-  //   let res = arr.forEach(n => {
-  //     console.log(`El numero en el indice ${indice} es : ${n}`);
-  //     res + 1;
-  // });
-
-  //   cambie el metodo for each ya que no me devuelve nada
-
-  let res = arr.mapCustomizado(n => n + 1);
+  let res = arr.forEach(n => {
+    console.log(`El numero en el indice ${indice} es : ${n}`);
+    res + 1;
+  });
 
   console.log(res); // [2,3]
 })();
