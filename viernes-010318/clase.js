@@ -30,3 +30,18 @@ fetch()
 process.nextTick()
 
 */
+
+let url = 'https:////jsonplaceholder.tipycode.com/'
+let usuarios = fetch(`${url}users`)
+
+usuarios
+  .then( data => data.json())
+  .then( users => `${url}posts?userId=${users[6].id}`)
+  .then( resp => resp.json())
+  .then( data => {
+    // ejemplo promise all
+    return Promise.all( data.map( post => fetch(`${url}comments?postId=${post.id}`)))
+  })
+  .then( data => Promise.all( data.map( comment=> comment.json())))
+  .then( data => console.log(data))
+  .catch( err => console.log('Error: ', err))
