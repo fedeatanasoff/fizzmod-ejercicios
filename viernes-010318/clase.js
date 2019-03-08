@@ -31,7 +31,7 @@ process.nextTick()
 
 */
 
-let url = 'https:////jsonplaceholder.tipycode.com/'
+let url = 'https:////jsonplaceholder.typicode.com/'
 let usuarios = fetch(`${url}users`)
 
 usuarios
