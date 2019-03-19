@@ -1,0 +1,8 @@
+1) npm install webpack webpack-cli babel-loader @babel/core @babel/preset-react @babel/preset-env
+
+2) .babelrc =>
+
+    {
+        "presets" : ["@babel/env","@babel/react"]
+    }
+
