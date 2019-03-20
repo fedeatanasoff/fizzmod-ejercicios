@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="text">
+        </div>
+        <button>enviar</button>
+    </form>
+    <script>
+        let form = document.querySelector("form")
+        form.addEventListener("submit",e=>{
+            e.preventDefault()
+            //input -select - textarea - button - fieldset
+            let usuario = e.target[0].value
+            fetch("url",{
+                method : "POST",
+                headers : {
+                    "Content-Type" : "application/json"
+                },
+                body : JSON.stringify({usuario})
+            })
+        })
+    </script>
+</body>
+</html>

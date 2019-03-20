@@ -1,0 +1,23 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "horacio"
+    },
+    {
+      "id": 2,
+      "nombre": "juan"
+    },
+    {
+      "nombre": "Ana",
+      "id": 3
+    }
+  ],
+  "mensajes": [
+    {
+      "id": 1,
+      "id_usuario": 1,
+      "mensaje": "Hola"
+    }
+  ]
+}
